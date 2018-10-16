@@ -1,0 +1,38 @@
+<div>
+  <!-- start of input field div -->
+  Enter :
+  <input placeholder="input language eg. : JAVA" type="text" [(ngModel)]="userName">
+  <!-- get input value as parameter -->
+  <button (click)="search()">Accent</button>
+  <!-- involke search() -->
+</div>
+<!-- end of div -->
+
+<table class="responsive-table highlight" style="width:100%" border="1">
+  <!-- start of table div -->
+  <tr>
+    <!-- start of table heading div -->
+    <th>COMPANY</th>
+    <th>company_logo</th>
+    <th>company_url</th>
+    <th>title</th>
+  </tr>
+  <!-- end of table heading div -->
+
+  <!-- <div *ngIf="!responce.valid">Oops! Something went wrong. -->
+    <!-- if there is wrong  -->
+    <div *ngFor="let data of responce">
+      <!-- load all value to table body, json objects -->
+      <tr>
+        <!-- table body container -->
+        <td>{{data.company}}</td>
+        <td>{{data.company_logo}}</td>
+        <td>{{data.company_url}}</td>
+        <td>{{data.title}}</td>
+      </tr>
+    </div>
+    <!-- end of div -->
+  <!-- </div> -->
+  <!-- end of div -->
+</table>
+<!-- end of table -->
